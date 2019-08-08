@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {CompService} from '../comp.service';
+import {Comp} from '../comp';
+import {COMP} from '../comp-stock';
 
 @Component({
   selector: 'app-jobport',
