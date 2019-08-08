@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { CompService} from './comp.service';
 
 import { AppComponent } from './app.component';
 import { JobportComponent } from './jobport/jobport.component';
@@ -14,7 +14,7 @@ import { JobportComponent } from './jobport/jobport.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [CompService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
