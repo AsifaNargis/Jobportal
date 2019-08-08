@@ -1,0 +1,24 @@
+<input type="text" skill="" value="" placeholder= "Please enter the your skill" #skill>
+<button type="button" skill="button" (click)= "this.getStock(skill.value)">
+	Search
+</button>
+
+<div>
+	<table border= "1">
+		<tr *ngIf="this.currentStock !== undefined">
+			<td> {{this.currentStock.skill}}</td>
+			<td *ngFor= "let v of this.currentStock.values"> {{v}} </td>
+		</tr>
+	</table>
+</div>
+
+<div>
+  <table border="1">
+    <tr *ngFor="let past of this.pastStock">
+      <td>{{past.skill}}</td>
+      <td>{{past.searchTime}}</td>
+      <td *ngFor="let v of past.values">{{v}}</td>
+      <td> <button (click) = "this.getStock(past.skill)">Show this</button></td>
+    </tr>
+  </table>
+</div>
